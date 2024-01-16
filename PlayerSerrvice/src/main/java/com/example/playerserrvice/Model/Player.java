@@ -2,6 +2,9 @@ package com.example.playerserrvice.Model;
 
 
 import io.swagger.annotations.ApiModelProperty;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+
 public class Player {
 
     @ApiModelProperty(notes = "Name of the Player",name="name",required=true,value="player 1")

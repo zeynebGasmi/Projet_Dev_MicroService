@@ -25,10 +25,10 @@ public class PlayerController {
 
     List<Player> players = new ArrayList<Player>();
     {
-        players.add(new Player(111,"Sajal"));
-        players.add(new Player(222,"Lokesh"));
-        players.add(new Player(333,"Kajal"));
-        players.add(new Player(444,"Sukesh"));
+        players.add(new Player(111,"Mahrez"));
+        players.add(new Player(222,"Bounedjah"));
+        players.add(new Player(333,"Bennacer"));
+        players.add(new Player(444,"Belaili"));
     }
 
 
