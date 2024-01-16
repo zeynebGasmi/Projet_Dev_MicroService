@@ -5,18 +5,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-
-@Service
 public class Team {
+    private Long id;
+    private String name;
 
-    private final RestTemplate restTemplate;
-    private static final String PLAYER_SERVICE_URL = "http://player-service/api/players/";
-    @Autowired
-    public Team(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
+
+    public Team(Long id, String name) {
+        super();
+        this.id = id;
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public Long getId() {
+        return id;
     }
 
-    public Player getPlayerById(Long playerId) {
-        return restTemplate.getForObject(PLAYER_SERVICE_URL + playerId, Player.class);
+
+    @Override
+    public String toString() {
+        return "Team [id=" + id + ", name=" + name  +"]";
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -1,48 +1,42 @@
 package com.example.matchserrvice.Model;
 
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class Match {
+    //match has a name, an id, a team id, a second team id
+    private Long id;
+    private String name;
+    private Long firstTeamId;
+    private Long secondTeamId;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    private String homeTeam;
-    private String awayTeam;
-
-    public Match(int id, String homeTeam, String awayTeam) {
+    public Match(Long id, String name, Long firstTeamId, Long secondTeamId) {
+        super();
         this.id = id;
-        this.homeTeam = homeTeam;
-        this.awayTeam = awayTeam;
+        this.name = name;
+        this.firstTeamId = firstTeamId;
+        this.secondTeamId = secondTeamId;
     }
 
-    public int getId() {
+    public String getName() {
+        return name;
+    }
+    public Long getId() {
         return id;
     }
-
-    public String getHomeTeam() {
-        return homeTeam;
+    public Long getFirstTeamId() {
+        return firstTeamId;
     }
-
-    public String getAwayTeam() {
-        return awayTeam;
+    public Long getSecondTeamId() {
+        return secondTeamId;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public void setHomeTeam(String homeTeam) {
-        this.homeTeam = homeTeam;
+    public void setFirstTeamId(Long firstTeamId) {
+        this.firstTeamId = firstTeamId;
     }
-
-    public void setAwayTeam(String awayTeam) {
-        this.awayTeam = awayTeam;
+    public void setSecondTeamId(Long secondTeamId) {
+        this.secondTeamId = secondTeamId;
+    }
+    public String toString() {
+        return "Match [id=" + id + ", name=" + name + ", firstTeamId=" + firstTeamId + ", secondTeamId=" + secondTeamId + "]";
     }
 }
