@@ -1,13 +1,13 @@
-package com.example.matchservice;
+package com.example.matchserrvice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MatchServiceApplication {
+public class MatchSerrviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MatchServiceApplication.class, args);
+		SpringApplication.run(MatchSerrviceApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package com.example.matchservice;
+package com.example.matchserrvice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MatchServiceApplicationTests {
+class MatchSerrviceApplicationTests {
 
 	@Test
 	void contextLoads() {
